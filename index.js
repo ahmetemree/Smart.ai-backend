@@ -43,6 +43,10 @@ app.get("/api/upload", (req, res) => {
   const result = imagekit.getAuthenticationParameters();
   res.send(result);
 });
+app.get("/api/test", (req, res) => {
+  
+  res.send("sucess");
+});
 
 // app.get("/api/test" , ClerkExpressRequireAuth(),(req,res)=>{
 //     const userId = req.auth.userId
