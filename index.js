@@ -43,6 +43,7 @@ app.get("/api/upload", (req, res) => {
   const result = imagekit.getAuthenticationParameters();
   res.send(result);
 });
+
 app.get("/api/test", (req, res) => {
   
   res.send("sucess");
@@ -53,7 +54,7 @@ app.get("/api/test", (req, res) => {
 //     console.log(userId);
 //     res.send("/success!")
 // })
-app.post("/api/chats", ClerkExpressRequireAuth({}), async (req, res) => {
+app.post("/api/chats", ClerkExpressRequireAuth(), async (req, res) => {
     const userId = req.auth.userId
   const { text } = req.body;
   try {
